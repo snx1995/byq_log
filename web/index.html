@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .img-container {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            position: relative;
+            transform-origin: 50% 50%;
+            transform: rotate3d(1, 0, 0, 60deg);
+        }
+        .rotate-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            width: 200px;
+            height: 200px;
+            animation: rotate 3s infinite linear;
+        }
+        .stand {
+            width: 20px;
+            height: 100px;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <img src="./test.png" alt="" class="rotate-img">
+        <img src="./test.png" alt="" class="rotate-img">
+        <div class="stand"></div>
+    </div>
+</body>
+</html>
